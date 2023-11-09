@@ -3,13 +3,20 @@ def is_prime(number: int) -> bool:
     if number <= 1:
         return False
 
-    evaluator = 2
+    if number == 2 or number == 3:
+        return True
+
+    if number % 2 == 0 or number % 3 == 0:
+        return False
+
+    evaluator = 5
     number_sqrt = math.sqrt(number)
+
     while evaluator <= number_sqrt:
-        if number % evaluator == 0:
+        if number % evaluator == 0 or number % (evaluator + 2) == 0:
             return False
         
-        evaluator += 1
+        evaluator += 6
 
     return True
 
