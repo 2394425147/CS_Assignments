@@ -1,5 +1,3 @@
-import math
-
 def GCD_function(number1: int, number2: int) -> (int, int):
     # calculate gcd
     swizzle1 = number1
