@@ -2,7 +2,7 @@ def GCD_function(number1: int, number2: int) -> (int, int):
     # calculate gcd
     swizzle1 = number1
     swizzle2 = number2
-    while(swizzle2):
+    while swizzle2:
         swizzle1, swizzle2 = swizzle2, swizzle1 % swizzle2
     gcd = swizzle1
     
