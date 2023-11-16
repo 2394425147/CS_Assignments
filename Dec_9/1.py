@@ -1,4 +1,5 @@
 import math
+
 def is_prime(number: int) -> bool:
     if number <= 1:
         return False
@@ -9,6 +10,7 @@ def is_prime(number: int) -> bool:
     if number % 2 == 0 or number % 3 == 0:
         return False
 
+    # 大于3的所有素数都能表达为6k+/-1 (k为整数)
     evaluator = 5
     number_sqrt = math.sqrt(number)
 
@@ -19,6 +21,7 @@ def is_prime(number: int) -> bool:
         evaluator += 6
 
     return True
+
 
 while True:
     number = int(input("请输入一个大于0的整数: "))

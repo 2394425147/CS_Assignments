@@ -1,12 +1,6 @@
 def print_diamond(height: int):
-    row = 1
-    while row < height:
-        print(" " * (height - row) + "*" * (2 * row - 1))
-        row += 1
-    while row >= 1:
-        print(" " * (height - row) + "*" * (2 * row - 1))
-        row -= 1
-    pass
+    for row in range(height - 1, -height, -1):
+        print(" " * abs(row), "*" * ((height - abs(row)) * 2 - 1), sep="")
 
 number = int(input("N: "))
 print_diamond(number)
