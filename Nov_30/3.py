@@ -41,7 +41,7 @@ def hanoi(stack_size: int, max_iteration: int = 1_000_000) -> bool:
 
 def main():
     while True:
-        rawNumber = input("请输入一个数字 (输入0结束): ")
+        rawNumber = input("请输入一个数字 (输入0g结束): ")
         if not rawNumber.removeprefix("-").isdigit():
             print("输入的不是数字，请重新输入")
             continue
