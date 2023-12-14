@@ -11,12 +11,25 @@ def get_max(arr: list[int], count: int) -> list[int]:
     """
     result = []
     for item in arr:
-        if len(result) > 0 and item <= result[0]:
+        result_count = len(result)
+        if result_count == count and item <= result[-1]:
             continue
-        
-        result.insert(0, item)
 
-        if len(result) > count:
+        item_added = False
+        for i in range(result_count):
+            if item > result[i]:
+                result.insert(i, item)
+                item_added = True
+                break
+
+        # Only happens if the list isn't full
+        if not item_added:
+            result.append(item)
+
+        # At this point a new item is guaranteed to have been added
+        # So if the loop started with a full list,
+        # there's surely an extra item at the end
+        if result_count == count:
             result.pop()
 
     return result
