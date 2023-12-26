@@ -14,7 +14,7 @@ def display(arr: list[Student]):
     for student in arr:
         student.print_stats()
 
-def select_sort(arr: list[Student]):
+def sort_by_total_score(arr: list[Student]):
     """
     Sorts a list of students by total score in-place
 
@@ -62,7 +62,7 @@ def main():
 
     display(student_arr)
 
-    select_sort(student_arr)
+    sort_by_total_score(student_arr)
 
     averages, fails = course_average(student_arr), count_fail(student_arr)
 
