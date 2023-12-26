@@ -21,7 +21,7 @@ class Student:
         self.name = ''.join(random.choices(string.ascii_letters, k=6))
 
         for subject in SUBJECTS:
-            self.update_score(subject, random.randint(40, 100))    
+            self.set_score(subject, random.randint(40, 100))    
 
         random.seed() # Revert to default seed after method to ensure code outside this method still behaves normally
         pass
@@ -38,7 +38,7 @@ class Student:
         
         return self.__scores[subject]
 
-    def update_score(self, subject: str, value: int):
+    def set_score(self, subject: str, value: int):
         """
         Updates a subject with a new value
 
