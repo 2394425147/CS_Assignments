@@ -11,7 +11,7 @@ def display(arr: list[Student]):
     Parameters:
     arr: A list of students to be displayed
     """
-    for index, student in enumerate(arr):
+    for student in arr:
         student.print_stats()
 
 def select_sort(arr: list[Student]):
