@@ -1,7 +1,11 @@
 from Errors.MyError import MyError
 
 def myfunction():
-    raise MyError("Raised as MyError")
+    try:
+        raise MyError("Hello from MyError")
+    except MyError as e:
+        print(f"Caught MyError:\n{e}")
+
 
 
 if __name__ == "__main__":
